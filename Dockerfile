@@ -2,7 +2,7 @@
 # Pterodactyl Core Dockerfile
 # Environment: FOR WINDOWS GAMES
 # ----------------------------------
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 
 MAINTAINER Hari Narayanan, <smgdark@gmail.com>
 
@@ -15,8 +15,6 @@ RUN apt-get update \
 	&& apt-get install -y --no-install-recommends \
 		curl \
 		unzip \
-		wget \
-		ca-certificates \
 	&& useradd -m -d /home/container container
 
 # Install wine and related packages
