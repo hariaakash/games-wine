@@ -12,7 +12,7 @@ RUN 		dpkg --add-architecture i386 \
 			&& apt-get install -y unzip curl \
 			&& useradd -m -d /home/container container
 
-RUN 		add-apt-repository -y ppa:ubuntu-wine/ppa \
+RUN 		apt-get install -y software-properties-common && add-apt-repository -y ppa:ubuntu-wine/ppa \
 			&& apt-get update -y
 			
 RUN			apt-get install -y wine1.8 winetricks \
