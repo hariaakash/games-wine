@@ -1,7 +1,7 @@
 #!/bin/bash
 sleep 5
 
-cd /home/container/halo
+cd /home/container
 
 # Replace Startup Variables
 MODIFIED_STARTUP=`eval echo $(echo ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g')`
