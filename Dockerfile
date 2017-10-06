@@ -14,7 +14,7 @@ RUN 		dpkg --add-architecture i386 \
 
 RUN 		apt-get install -y software-properties-common && add-apt-repository -y ppa:ubuntu-wine/ppa \
 			&& apt-get update -y \
-			&& apt-get install -y wine1.7 winetricks \
+			&& apt-get install -y wine1.8 winetricks \
 			&& apt-get purge -y software-properties-common \
 			&& apt-get autoclean -y
 				
