@@ -2,9 +2,9 @@
 # Pterodactyl Core Dockerfile
 # Environment: FOR WINDOWS GAMES
 # ----------------------------------
-FROM suchja/x11client:latest
+FROM ubuntu:14.04
 
-MAINTAINER Pterodactyl Software, <support@pterodactyl.io>
+MAINTAINER Hari Narayanan, <smgdark@gmail.com>
 
 # Inspired by monokrome/wine
 ENV WINE_MONO_VERSION 0.0.8
@@ -38,15 +38,6 @@ RUN mkdir -p /usr/share/wine/mono \
 	
 
 USER container
-ENV  USER container
-ENV  HOME /home/container
-ENV WINEPREFIX /home/container/.wine
-ENV WINEARCH win32
-
-RUN cd /home/container \
-	&& wget -O halo.zip https://www.dropbox.com/s/4c2r4812cx0qf1h/halo.zip?dl=1 \
-	&& unzip halo.zip \
-	&& rm halo.zip
 
 WORKDIR /home/container
 
